@@ -1,0 +1,116 @@
+
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f5f5dc;
+      }
+      .container {
+          max-width: 800px;
+          margin: auto;
+          padding: 20px;
+          background: #d8cfc4;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+          color: #c2b280;
+
+      }
+      h2 {
+        color: #c2b280;
+      }
+      td{
+        color:grey;
+      }
+      tr{
+        color: #000;
+      }
+      .product-image {
+          width: 20%;
+          height: 20%;
+      }
+      .cta-button  {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #f0e68c;
+          color: black;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-top: 20px;
+      }
+      
+      .testimonial {
+          margin-top: 30px;
+          font-style: italic;
+          color: black;
+      }
+      form {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+      }
+      input[type="email"] {
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      input[type="submit"]  {
+          padding: 10px;
+          background-color: #f0e68c;
+          color: black;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      input[type="submit"]:hover {
+    background-color: #fffb00; /* Color más oscuro al pasar el mouse */
+      }
+      table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 20px;
+    color: #f5f5dc;
+}
+th, td {
+    border: 1px solid #ccc; /* Borde gris claro */
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+    color: grey;
+}
+tr{
+    border: 2px solid black;
+}
+th {
+    
+    background-color: black; /* Color de fondo para encabezados */
+    color: white; /* Color de texto blanco */
+}
