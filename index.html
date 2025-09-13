@@ -7,12 +7,56 @@
     <title>TecnoVino - Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="LandingPageRopa.html">Vista Nuestra Pagina Ofical</a>
+  <a class="navbar-brand" href="index2.html">Vista Nuestra Pagina Ofical</a>
 </nav>
 
  
     <style>
+        /* Estilos para el contenedor principal de la sección */
+.experience-section {
+    display: flex; /* ACTIVA FLEXBOX: Esto pone los hijos (la img y el div) uno al lado del otro. */
+    align-items: center; /* Centra los elementos verticalmente. */
+    background-color: #000000; /* Pone el fondo de la sección en color negro. */
+    padding: 50px; /* Añade un espacio interior para que no esté pegado a los bordes. */
+    gap: 40px; /* Crea un espacio de 40px entre la imagen y el texto. */
+    color: #ffffff; /* Pone el color del texto en blanco para que sea legible. */
+}
+
+/* Estilos para la imagen dentro de la sección */
+.experience-section img {
+    flex: 1; /* Hace que la imagen ocupe una parte del espacio disponible. */
+    max-width: 50%; /* Limita el ancho de la imagen a la mitad del contenedor. */
+    border-radius: 15px; /* Redondea las esquinas de la imagen. */
+    object-fit: cover; /* Asegura que la imagen cubra su espacio sin deformarse. */
+}
+
+/* Estilos para el contenedor del texto */
+.experience-text {
+    flex: 1; /* Hace que el contenedor de texto ocupe la otra parte del espacio disponible. */
+}
+
+/* (Opcional) Estilos para el título y el párrafo para ajustar márgenes */
+.experience-text h2 {
+    margin-top: 0;
+    font-size: 2.5em; /* Aumenta el tamaño del título */
+}
+
+.experience-text p {
+    margin-bottom: 0;
+    font-size: 1.1em; /* Aumenta ligeramente el tamaño del párrafo */
+}
+@media (max-width: 768px) {
+            .experience-section {
+                flex-direction: column; /* Apila los elementos verticalmente */
+                text-align: center; /* Centra el texto */
+            }
+            .experience-section img {
+                max-width: 100%; /* La imagen ocupa todo el ancho */
+            }
+        }
+        
         body {
+            margin: 0;
             background: #000;
             color: #fff;
             font-family: Arial, sans-serif;
@@ -111,6 +155,7 @@
             padding: 20px;
             margin-top: 30px;
         }
+       
     </style>
 </head>
 
@@ -118,8 +163,9 @@
     <section class="hero">
         <div class="hero-content">
             <h1>TecnoVino</h1>
-            <p>Vive la experiencia del vino en Guanajuato</p> <a href="#formulario"
-                class="btn btn-lg btn-primary">Reserva tu visita</a>
+            <p>Vive la experiencia del vino en Guanajuato</p> 
+            <a href="#formulario"class="btn btn-lg btn-primary">Reserva tu visita</a> 
+            <a href="#eventos" class="btn-lg btn-primary">Proximos Eventos</a>
         </div>
     </section> 
     <section class="benefits">
@@ -137,9 +183,22 @@
                 <h4>Calidad</h4>
                 <p>Cada botella refleja pasión, innovación y respeto por la tierra.</p>
             </div>
-            <a style="text-align: center;" href="LandingPageRopa.html" class="btn btn-lg btn-primary" >Vista Nuestra Pagina Ofical</a>
+            <a style="text-align: center;" href="index2.html" class="btn btn-lg btn-primary" >Vista Nuestra Pagina Ofical</a>
         </div>
     </section> 
+
+    <section id="eventos" class="experience-section">
+        <img src="imagenes/Vendimia.jpg" alt="Vendimia">
+    <div class="experience-text">
+        <h2>Proximas Vendimias</h2>
+        <p>Participa en la recolección y proceso del vino. Una actividad única para conocer más sobre el arte de la vinicultura y el sabor de la tradición.</p>
+    </div>
+    </section>
+
+    <section id="lanzamientos" class="experience-section">
+
+    </section>
+
     <section id="formulario" class="cta">
         <h2>Reserva tu visita</h2>
         <p>Déjanos tus datos y vive la experiencia TecnoVino</p>

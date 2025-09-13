@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Viñedo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            .experience-section {
+                flex-direction: column; /* Apila los elementos verticalmente */
+                text-align: center; /* Centra el texto */
+            }
+            .experience-section img {
+                max-width: 100%; /* La imagen ocupa todo el ancho */
+            }
+        }
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+        }
+
+        .carousel-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+
+        .product-card {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .about-section,
+        .experience-section {
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            color: white;
+        }
+
+        .about-section img,
+        .experience-section img {
+            width: 50%;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .about-text,
+        .experience-text {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .about-section h2,
+        .experience-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .about-section p,
+        .experience-section p {
+            text-align: left;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .about-section:nth-child(even),
+        .experience-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container"> <a class="navbar-brand" href="#">Viñedo</a> <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"> <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes Somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="recorridosDropdown"
+                            role="button" data-bs-toggle="dropdown">Recorridos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#visitas">Visitas Guiadas</a></li>
+                            <li><a class="dropdown-item" href="#vendimia">Vendimia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('imagenes/viñedo\ 1.webp');">
+                <div class="carousel-caption text-white">
+                    <h1 class="fw-bold">TecnoVino</h1>
+                    <h3>Innovación en cada copa.</h3>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('imagenes/viñedo\ 2.jpg');">
+                <div class="carousel-caption text-white">
+                    <h1 class="fw-bold">Vive</h1>
+                    <h3>Nuestras Instalaciones.</h3>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('imagenes/viñedo\ 3.jpg');">
+                <div class="carousel-caption text-white">
+                    <h1 class="fw-bold">Una experiencia</h1>
+                    <h3>Que te encantara</h3>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('imagenes/viñedo\ 4.jpg');">
+                <div class="carousel-caption text-white">
+                    <h1 class="fw-bold">Vino de vanguardia</h1>
+                    <h3>Sabor único.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .carousel-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: none !important;
+        }
+
+        .carousel-caption h1 {
+            font-size: 4rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-caption h3 {
+            font-size: 2rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <style>
+        .carousel-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .carousel-caption h1 {
+            font-size: 4rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-caption h3 {
+            font-size: 2rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <style>
+        .carousel-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .carousel-caption h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-caption h3 {
+            font-size: 2rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+    <style>
+        .carousel-container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            z-index: 10;
+        }
+
+        .carousel h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel h3 {
+            font-size: 2rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+    <section id="quienes-somos" class="about-section"> <img src="imagenes/viñedo%201.webp" alt="Viñedo 1">
+        <div class="about-text">
+            <h2>Quiénes Somos</h2>
+            <p>Somos un viñedo familiar en el corazón de Guanajuato, dedicado a la producción de vinos de calidad
+                superior. Nuestro compromiso es con la naturaleza, la tradición vinícola y el respeto por el medio
+                ambiente. Con años de experiencia, nuestro viñedo es un lugar ideal para los amantes del vino, donde
+                cada botella cuenta una historia de pasión y dedicación.</p>
+        </div>
+    </section>
+    <section id="experiencia" class="experience-section"> <img src="imagenes/viñedo%202.jpg" alt="Viñedo 2">
+        <div class="experience-text">
+            <h2>Viñedo, Una Experiencia Inolvidable</h2>
+            <p>Un paisaje espectacular, clima templado, caídas naturales de agua; un lugar ideal para la cosecha.
+                Localizado en el corazón de Guanajuato, haciéndolo el lugar ideal para vivir una memorable experiencia.
+                Aquí, cada rincón está lleno de historia, tradición y la magia que solo un viñedo puede ofrecer. Ven a
+                disfrutar de una experiencia única y enriquecedora, donde el vino es solo parte de lo que te ofrecemos.
+            </p>
+        </div>
+    </section>
+    <section id="productos" class="container py-5">
+        <h2 class="section-title">Nuestros Vinos</h2>
+        <div class="row">
+           <div class="col-md-4">
+    <div class="product-card text-center">
+        <h3>Vino Tinto</h3>
+        <img src="imagenes/vino_tinto.webp" alt="Vino Tinto" class="img-fluid rounded mb-3">
+        <p>Precio: $500</p>
+    </div>
+</div>
+            <div class="col-md-4">
+                <div class="product-card text-center">
+                    <h3>Vino Blanco</h3>
+                    <img src="imagenes/vino_blanco.webp" alt="Vino Tinto" class="img-fluid rounded mb-3">
+                    <p>Precio: $450</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card text-center">
+                    <h3>Vino Rosado</h3>
+                    <img src="imagenes/vino_rosado.webp" alt="Vino Tinto" class="img-fluid rounded mb-3">
+                    <p>Precio: $480</p>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>Tipo de Vino</th>
+                    <th>Precio</th>
+                    <th>Grado de Alcohol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vino Tinto</td>
+                    <td>$500</td>
+                    <td>13%</td>
+                </tr>
+                <tr>
+                    <td>Vino Blanco</td>
+                    <td>$450</td>
+                    <td>12%</td>
+                </tr>
+                <tr>
+                    <td>Vino Rosado</td>
+                    <td>$480</td>
+                    <td>11.5%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="visitas" class="about-section">
+    <img src="imagenes/Visita.jpg" alt="Visitas Guiadas">
+    <div class="about-text">
+        <h2>Visitas Guiadas</h2>
+        <p>Explora nuestros viñedos con expertos enológicos. Vive la experiencia de conocer los secretos del vino desde su cultivo hasta la copa.</p>
+    </div>
+</section>
+
+<section id="vendimia" class="experience-section">
+    <img src="imagenes/Vendimia.jpg" alt="Vendimia">
+    <div class="experience-text">
+        <h2>Vendimia</h2>
+        <p>Participa en la recolección y proceso del vino. Una actividad única para conocer más sobre el arte de la vinicultura y el sabor de la tradición.</p>
+    </div>
+</section>
+<section id="contacto" class="container py-5">
+        <h2 class="section-title">Contáctanos</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com">
+            </div>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha de visita</label>
+                <input type="date" class="form-control" id="fecha">
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3"
+                    placeholder="Escribe tu consulta o reserva"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <section id="ubicacion" class="container py-5">
+    <h2 class="section-title">Nuestra Ubicación</h2>
+    <p class="section-description">Encuéntranos en el Instituto Tecnológico de Celaya, Campus 2.</p>
+    <div class="map-container" style="text-align:center;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.7336260187045!2d-100.8114344845891!3d20.54123598643208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c99d06f0b22ed%3A0x1c6de3168b5f647!2sInstituto%20Tecnol%C3%B3gico%20de%20Celaya%20-%20Campus%202!5e0!3m2!1ses-419!2smx!4v1693234286824!5m2!1ses-419!2smx" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+<footer class="bg-dark text-center text-white py-4">
+    <p>&copy; 2025 Viñedo. Todos los derechos reservados.</p>
+</body>
+
+</html>
