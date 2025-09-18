@@ -100,6 +100,26 @@
     margin-top: 20px;
     color: #f5f5dc;
 }
+.custom-table {
+            margin-top: 40px;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .custom-table th {
+            background-color: #333;
+            color: #fff;
+            font-weight: bold;
+            border-bottom: 2px solid #444;
+            text-align: center;
+        }
+
+        .custom-table td {
+            text-align: center;
+            padding: 15px;
+        }
 th, td {
     border: 1px solid #ccc; /* Borde gris claro */
     padding: 10px; /* Espaciado interno */
@@ -113,4 +133,5 @@ th {
     
     background-color: black; /* Color de fondo para encabezados */
     color: white; /* Color de texto blanco */
+
 }
