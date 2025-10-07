@@ -402,10 +402,11 @@
         <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com">
         <div class="invalid-feedback"></div>
     </div>
-    <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu consulta o reserva"></textarea>
-        <div class="invalid-feedback"></div>
+   <div class="mb-3">
+    <label for="mensaje" class="form-label">Mensaje</label>
+    <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu consulta o reserva" maxlength="250"></textarea> <div id="contador" class="form-text text-end">0/250</div>
+    
+    <div class="invalid-feedback"></div> </div>
     </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
     
