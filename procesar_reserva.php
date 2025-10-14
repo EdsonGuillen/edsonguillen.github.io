@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // 3. Preparar el correo electrónico.
-    $destinatario = "tu-correo@ejemplo.com"; // <-- ¡CAMBIA ESTO A TU CORREO REAL!
+    $destinatario = "19031818@itcelaya.edu.mx"; // <-- ¡CAMBIA ESTO A TU CORREO REAL!
     $asunto = "Nueva Reserva de Visita de: " . $nombre;
 
     $cuerpo_mensaje = "Has recibido una nueva solicitud de reserva:\n\n";
@@ -49,4 +49,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     http_response_code(403); // Forbidden
     echo "Acceso no permitido.";
 }
+
 ?>
